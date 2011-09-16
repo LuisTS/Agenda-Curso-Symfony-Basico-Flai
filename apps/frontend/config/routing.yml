@@ -1,0 +1,51 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+homepage:
+  url:   /
+  param: { module: agenda, action: index }
+
+busqueda_contacto:
+  url:   /busqueda/:letra
+  param: { module: agenda, action: busqueda }
+
+busqueda_todos:
+  url:   /busqueda/
+  param: { module: agenda, action: index }
+
+detalle_contacto:
+  class:   sfDoctrineRoute
+  options: { model: Contacto, type: object }
+  url:     /detalle/:id
+  param:   { module: agenda, action: detalle }
+
+crear:
+  url: /crear
+  param: { module: agenda, action: crear }
+
+editar:
+  class:   sfDoctrineRoute
+  options: { model: Contacto, type: object }
+  url:     /editar/:id
+  param:   { module: agenda, action: editar }
+  requirements: { sf_method: [ get, post ] }
+
+borrar:
+  class:   sfDoctrineRoute
+  options: { model: Contacto, type: object }
+  url:     /borrar/:id
+  param:   { module: agenda, action: borrar }
+
+autor:
+  url: /autor
+  param: { module: agenda, action: autor }
+
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
