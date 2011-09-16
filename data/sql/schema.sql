@@ -1,0 +1,3 @@
+CREATE TABLE contacto (id BIGINT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, primer_apellido VARCHAR(255) NOT NULL, segundo_apellido VARCHAR(255), imagen VARCHAR(255) DEFAULT 'noimg.jpg', visitas BIGINT DEFAULT 0, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE direccion (id BIGINT AUTO_INCREMENT, direccion LONGTEXT NOT NULL, email VARCHAR(255), telefono VARCHAR(9), info_adicional LONGTEXT, predeterminado TINYINT(1) DEFAULT '0' NOT NULL, contacto_id BIGINT, INDEX contacto_id_idx (contacto_id), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE direccion ADD CONSTRAINT direccion_contacto_id_contacto_id FOREIGN KEY (contacto_id) REFERENCES contacto(id);

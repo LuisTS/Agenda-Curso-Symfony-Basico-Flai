@@ -1,0 +1,23 @@
+Contacto:
+  columns:
+    nombre:           { type: varchar(255), notnull: true }
+    primer_apellido:  { type: varchar(255), notnull: true }
+    segundo_apellido: { type: varchar(255), notnull: false }
+    imagen:           { type: varchar(255), notnull: false, default: 'noimg.jpg' }
+    visitas:          { type: integer, notnull: false, default: 0 }
+    
+Direccion:
+  columns:
+    direccion:      { type: clob, notnull: true }
+    email:          { type: varchar(255), notnull: false }
+    telefono:       { type: varchar(9), notnull: false }
+    info_adicional: { type: clob, notnull: false }
+    predeterminado: { type: boolean, notnull: true, default: 0 }
+    contacto_id:    { type: integer, notnull: false }
+  relations:
+    Contacto:
+      class:        Contacto
+      local:        contacto_id
+      foreign:      id
+      foreignAlias: Direcciones
+      

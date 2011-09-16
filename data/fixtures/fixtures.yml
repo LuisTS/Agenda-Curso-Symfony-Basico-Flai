@@ -1,0 +1,115 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+Contacto:
+  
+  contacto_01:
+    nombre: Stewie
+    primer_apellido: Griffin
+    imagen: foto_stewie_griffin.jpg
+  
+  contacto_02:
+    nombre: Phillip J. 
+    primer_apellido: Fry
+    imagen: foto_phillipj_fry.jpg
+    
+  contacto_03:
+    nombre: Peter
+    primer_apellido: Griffin
+    imagen: foto_peter_griffin.jpg
+    
+  contacto_04:
+    nombre: Brian
+    primer_apellido: Griffin
+    imagen: foto_brian_griffin.jpg
+    
+  contacto_05:
+    nombre: Homer
+    primer_apellido: Simpson
+    imagen: foto_homer_simpson.gif
+    
+  contacto_06:
+    nombre: Christopher
+    primer_apellido: Peterson
+    imagen: foto_christopher_peterson.jpg
+    
+  contacto_07:
+    nombre: Bender
+    primer_apellido: Bending
+    segundo_apellido: Rodríguez
+    imagen: foto_bender_bending_rodriguez.gif
+  
+  contacto_08:
+    nombre: Bob
+    primer_apellido: Esponja
+    imagen: foto_bob_esponja.jpg
+    
+  contacto_09:
+    nombre: Lois
+    primer_apellido: Griffin
+    imagen: foto_lois_griffin.jpg
+  
+       
+Direccion:
+
+  direccion_01:
+    direccion: 31 de la Calle Spooner - Quahog (Rhode Island)
+    email: nada@na.es
+    telefono: 555123456
+    info_adicional: Dirección principal de los Griffin.
+    predeterminado: 1
+    Contacto: contacto_01
+    
+  direccion_02:
+    direccion: La Almeja Borracha - Quahog (Rhode Island)
+    email: nada@na.es
+    telefono: 957223457
+    info_adicional:
+    predeterminado: 0
+    Contacto: contacto_01
+    
+  direccion_03:
+    direccion: Calle Grande nº 5 CP 63456 - Benalmádena, Málaga (España)
+    email: otro@na.es
+    telefono: 952123454
+    info_adicional: Cambio de direcciones.
+    predeterminado: 0
+    Contacto: contacto_01
+    
+  direccion_04:
+    direccion: Desconocido - Brooklyn (Nueva York)
+    email: sinco@nada.com
+    telefono: 777777777
+    predeterminado: 1
+    Contacto: contacto_02
+    
+  direccion_05:
+    direccion: Evergreen Terrace, 59, Springfield, TA
+    email: chunkylover53@aol.com
+    telefono: 555555555
+    predeterminado: 1
+    Contacto: contacto_05
+    
+  direccion_06:
+    direccion: 31 de la Calle Spooner - Quahog (Rhode Island)
+    telefono: 951333443
+    predeterminado: 1
+    Contacto: contacto_03
+    
+  direccion_07:
+    direccion: Calle Locura - Limbo (Saturno)
+    telefono: 111222333
+    predeterminado: 1
+    Contacto: contacto_06
+    
+  direccion_08:
+    direccion: Una Piña - Debajo del Mar (Océano)
+    telefono: 666666666
+    predeterminado: 1
+    Contacto: contacto_08
+
+    
+    
